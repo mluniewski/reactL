@@ -1,5 +1,4 @@
 import * as actionTypes from './actionTypes';
-import axios from 'axios';
 
 export const authStart = () => {
     return {
@@ -51,4 +50,10 @@ export const auth = (email, password, isSignup) => {
         password: password,
         isSignup: isSignup
     }
+ }
+
+ export const authCheckState = () => {
+     return {
+         type: actionTypes.AUTH_CHECK_INITIAL_STATE
+     }
  }
